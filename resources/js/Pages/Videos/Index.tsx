@@ -6,7 +6,7 @@ export default function Videos ({ videos }) {
         <div>
             {videos.map((video, index) => (
                 <div key={index}>
-                    {video.title} - <Link href={`/videos/${video.id}`}>詳細へ</Link>
+                    {video.title} - <Link href={`/videos/details/${video.id}`}>詳細へ</Link>
                 </div>
             ))}
         <Link href={`/videos/create`}>作成</Link>

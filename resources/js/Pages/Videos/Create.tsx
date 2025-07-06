@@ -1,8 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
 import { Inertia } from '@inertiajs/inertia';
+import { StatusProps } from '@/types/videos';
 
-export default function Create () {
+export default function Create({statuses: StatusProps}: StatusProps) {
 
     const handleBack = () => {
         window.history.back();
@@ -32,7 +33,7 @@ export default function Create () {
                     type="text"
                     id="title"
                     name="title"
-                    value={FormData.title}
+                    value={formData.title}
                     onChange={handleChange}
                 />
             </div>
@@ -41,7 +42,7 @@ export default function Create () {
                     type="text"
                     id="description"
                     name="description"
-                    value={FormData.description}
+                    value={formData.description}
                     onChange={handleChange}
                 />
             </div>
@@ -50,7 +51,7 @@ export default function Create () {
                     type="text"
                     id="url"
                     name="url"
-                    value={FormData.url}
+                    value={formData.url}
                     onChange={handleChange}
                 />
             </div>
@@ -59,7 +60,7 @@ export default function Create () {
                     type="text"
                     id="thumbnail"
                     name="thumbnail"
-                    value={FormData.thumbnail}
+                    value={formData.thumbnail}
                     onChange={handleChange}
                 />
             </div>

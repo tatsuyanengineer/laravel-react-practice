@@ -33,10 +33,10 @@ Route::middleware('auth')->prefix('videos')->group(function () {
     Route::get('/', [VideoController::class, 'index'])->name('video.index');
     Route::get('/create', [VideoController::class, 'create'])->name('video.create');
     Route::post('/store', [VideoController::class, 'store'])->name('video.store');
-    Route::get('/{id}', [VideoController::class, 'show'])->name('video.show');
-    // Route::get('/{id}', [VideoController::class, 'edit'])->name('video.edit');
-    // Route::patch('/{id}', [VideoController::class, 'update'])->name('video.update');
-    // Route::delete('/video/{id}', [VideoController::class, 'destroy'])->name('video.destroy');
+    Route::get('/details/{id}', [VideoController::class, 'show'])->name('video.show');
+    Route::get('/edit/{id}', [VideoController::class, 'edit'])->name('video.edit');
+    Route::put('/update/{id}', [VideoController::class, 'update'])->name('video.update');
+    Route::delete('/destroy/{id}', [VideoController::class, 'destroy'])->name('video.destroy');
 });
 
 require __DIR__.'/auth.php';
